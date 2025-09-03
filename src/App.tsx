@@ -1,5 +1,4 @@
-import { Box, Typography } from '@mui/material'
-import { useState } from 'react'
+import { Box } from '@mui/material'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 

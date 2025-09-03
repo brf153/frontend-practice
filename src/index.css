@@ -18,3 +18,10 @@ body, html {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'SchibstedGroteskSemiBold';
+  src: url('/fonts/SchibstedGrotesk-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}

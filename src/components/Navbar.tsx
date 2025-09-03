@@ -2,11 +2,9 @@ import { Box, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { navbarContent } from "../constants/constants";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
-    <Box sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000 }}>
+    <Box sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 10 }}>
       <Box
         sx={{
           display: "flex",
@@ -30,13 +28,12 @@ const Navbar = (props: Props) => {
             display: "flex",
             gap: 10,
             fontSize: "2.5vmin",
-            fontWeight: 700,
             flex: 1,
             justifyContent: "center",
           }}
         >
           {navbarContent.map((item) => (
-            <Typography key={item} sx={{ cursor: "pointer" }}>
+            <Typography key={item} sx={{ cursor: "pointer", fontFamily: "SchibstedGroteskSemiBold" }}>
               {item}
             </Typography>
           ))}

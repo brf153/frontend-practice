@@ -10,12 +10,15 @@ const theme = createTheme({
       main: '#1976d2', // Material Blue
     },
     secondary: {
-      main: '#dc004e', // Material Pink
+      main: '#f9cdcd', // Material Pink
     },
     background: {
       default: '#f5f5f5',
-      paper: '#fff',
+      paper: '#252422'
     },
+    text: {
+      secondary: '#f9cdcd'
+    }
   },
   typography: {
     fontFamily: 'SchibstedGrotesk, Arial, sans-serif'
