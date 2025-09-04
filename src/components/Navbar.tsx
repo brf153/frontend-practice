@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { navbarContent } from "../constants/constants";
 
-const Navbar = () => {
+const Navbar = ({ setShowMenu }: { setShowMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
   return (
     <Box sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 10 }}>
       <Box
@@ -39,6 +39,7 @@ const Navbar = () => {
           ))}
         </Box>
         <Box
+          onClick={() => setShowMenu((prev) => !prev)}
           sx={{
             display: "flex",
             alignItems: "center",

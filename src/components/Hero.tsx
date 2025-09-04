@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Menu from "./Menu";
 
-const Hero = () => {
+const Hero = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
   return (
     <Box
       sx={{
@@ -61,7 +61,10 @@ const Hero = () => {
         </Typography>
       </Box>
 
-      <Menu />
+      <Box sx={{ display: showMenu ? "block" : "none" }}>
+        <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
+      </Box>
+
     </Box>
   );
 };

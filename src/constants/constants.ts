@@ -9,7 +9,7 @@ const cardContent = [
         year: 2024
     },
     {
-        img: '/assets/secondNav.jpg',
+        img: '/assets/secondNav.webp',
         title: 'Nike',
         subtitle: 'Sportswear Leader',
         description: 'Nike is a global leader in athletic footwear, apparel, and equipment.',
