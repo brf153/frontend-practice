@@ -1,9 +1,26 @@
 import { Box, Typography } from "@mui/material";
 import Menu from "./Menu";
+import { useEffect, useState } from "react";
 
 const Hero = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
+  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setCoordinates({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <Box
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       sx={{
         height: "100dvh",
         width: "100vw",
@@ -11,6 +28,7 @@ const Hero = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: React
         padding: 0,
         margin: 0,
         position: "relative",
+        cursor: isHovered && !showMenu ? "none" : "default",
       }}
     >
       <video
@@ -26,9 +44,10 @@ const Hero = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: React
           flexDirection: "column",
           gap: 1,
           position: "absolute",
-          top: "50%",
-          left: "50%",
+          top: isHovered ? coordinates.y : "50%",
+          left: isHovered ? coordinates.x : "50%",
           transform: "translate(-50%, -50%)",
+          transition: isHovered ? "none":"top 0.4s cubic-bezier(0.4,0,0.2,1), left 0.4s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
         <Typography
@@ -61,7 +80,7 @@ const Hero = ({ showMenu, setShowMenu }: { showMenu: boolean; setShowMenu: React
         </Typography>
       </Box>
 
-      <Box sx={{ display: showMenu ? "block" : "none" }}>
+      <Box sx={{ display: showMenu ? "block" : "none"}}>
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Box>
 
