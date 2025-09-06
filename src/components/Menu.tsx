@@ -23,7 +23,7 @@ const Card = (props: Props) => {
     if (detailsRef.current) {
       gsap.to(detailsRef.current, {
         height: isHover ? "13rem" : "5rem",
-        bottom: isHover ? "11%" : "15%",
+        bottom: isHover ? "11%" : "17%",
         duration: 0.4,
         ease: "cubic-bezier(0.28,0,0.49,1)",
       });
@@ -289,7 +289,7 @@ const Menu = ({
         {/* Middle Section */}
         <Box
           sx={{
-            height: "70%",
+            height: "72%",
             width: "100%",
             overflowX: "hidden",
           }}

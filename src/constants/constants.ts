@@ -2,38 +2,38 @@ const navbarContent = ["Work", "About", "News", "Thinking", "Career", "Contact"]
 
 const cardContent = [
     {
-        img: '/assets/firstNav.jpg',
-        title: 'Apple',
-        subtitle: 'Innovative Technology',
-        description: 'Apple is known for its innovative products such as the iPhone, MacBook, and Apple Watch.',
+        img: '/assets/firstNav.webp',
+        title: 'B/D JAMS',
+        subtitle: 'It\'S A VIBE',
+        description: 'A weekly-ish playlist curated by the employees @BASIC/DEPT',
         year: 2024
     },
     {
         img: '/assets/secondNav.webp',
-        title: 'Nike',
-        subtitle: 'Sportswear Leader',
-        description: 'Nike is a global leader in athletic footwear, apparel, and equipment.',
+        title: 'APPLIED',
+        subtitle: 'THOUGHTS AND PERSPECTIVES',
+        description: 'Our panel series and thought-leadership platform where we share perspectives and tactics related to strategy, design, and technology.',
         year: 2023
     },
     {
-        img: '/assets/thirdNav.jpg',
-        title: 'Google',
-        subtitle: 'Search Engine Giant',
-        description: 'Google specializes in Internet-related services and products, including search, advertising, and cloud computing.',
+        img: '/assets/thirdNav.webp',
+        title: 'MOVIES',
+        subtitle: 'OUR NEW HQ',
+        description: 'Explore our new HQ through a site experience that showcases the two-year journey of imagining, designing, and developing our new office.',
         year: 2024
     },
     {
-        img: '/assets/fourthNav.jpg',
-        title: 'Coca-Cola',
-        subtitle: 'Beverage Icon',
-        description: 'Coca-Cola is a world-renowned beverage company, famous for its flagship soft drink.',
+        img: '/assets/fourthNav.webp',
+        title: 'CRAFTER',
+        subtitle: 'CREATIVE COMMUNITY',
+        description: 'A communal initiative we operate to celebrate diversity and creativity by bringing together people from different backgrounds and interests.',
         year: 2022
     },
     {
-        img: '/assets/fifthNav.jpg',
-        title: 'Samsung',
-        subtitle: 'Electronics Innovator',
-        description: 'Samsung is a leading manufacturer of smartphones, TVs, and home appliances.',
+        img: '/assets/fifthNav.webp',
+        title: 'BRANDBEATS',
+        subtitle: 'PODCAST SERIES',
+        description: 'Our podcast series garnering 45,000+ listens per episode providing candid conversations around various industry related topics.',
         year: 2023
     }
 ]
